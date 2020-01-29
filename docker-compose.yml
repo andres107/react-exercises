@@ -1,0 +1,11 @@
+version: '2'
+services:
+  nodejs:
+    image: node:10.17
+    container_name: react-exercises
+    working_dir: /myapp
+    volumes:
+      - './:/myapp'
+    ports:
+      - 3000:3000
+    entrypoint: ./start-service.sh
