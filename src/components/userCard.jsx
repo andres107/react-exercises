@@ -8,7 +8,8 @@ export function UserCard(props) {
     <b>Nombre</b>: {name}<br/>
     <b>Apellido</b>: {lastName}<br/>
     <b>Trabajo</b>: {job}<br/>
-    <b>Activo</b>: {active}<br/>
+    <b>Activo</b>: {active ? 'Si' : 'No'}<br/>
+    --------------------------------------<br/>
     </>
   );
 }

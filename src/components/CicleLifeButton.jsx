@@ -1,5 +1,4 @@
 import React, { Component }  from 'react';
-import { randomColor } from "../helpers/nice"
 
 const MAX_ITER = 5; 
 export class CicleLifeButton extends Component {
