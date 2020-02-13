@@ -9,6 +9,8 @@ import CicleLifeButton from "./components/CicleLifeButton";
 import UserCard from "./components/userCard";
 import MyForm from "./components/MyForm"
 import Pokemons from "./components/Pokemons"
+import Calculator from "./components/Calculator";
+import Father from "./components/Father";
 import {
   BrowserRouter as Router,
   Switch,
@@ -107,11 +109,11 @@ function App() {
               </Route>
               <Route path="/INRI12">
                 <h2>INRI12</h2>
-                 <h3>Desarrollo en proceso</h3>
+                 <Calculator />
               </Route>
               <Route path="/INRI13">
                 <h2>INRI13</h2>
-                 <h3>Desarrollo en proceso</h3>
+                 <Father />
               </Route>
             </Switch>
           </div>
