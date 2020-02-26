@@ -12,6 +12,7 @@ import MyForm from "../../components/MyForm"
 import Pokemons from "../../components/Pokemons"
 import Calculator from "../../components/Calculator";
 import Father from "../../components/Father";
+import PokemonsContainer from "../../containers/Pokemons";
 import {
   BrowserRouter as Router,
   Switch,
@@ -56,6 +57,10 @@ function Home() {
     {
       title: "INRI-13",
       link: "INRI13"
+    },
+    {
+       title: "Redux",
+       link: "redux"
     }
   ];
 
@@ -69,58 +74,62 @@ function Home() {
 
   return (
     <div className="Home">
-     <Router>
-     <CustomizedAppBar options={options} title="Menú"/>
-     <div className="Home-header" style={{backgroundColor: background}}>
-      <center>
-        <img src={logo} className="Home-logo" alt="logo"/>
-        </center>
-        <Switch>
-        <Route path="/INRI6">
-          <h2>INRI6</h2>
-          <HelloWorldClass text="react"/>
-          <HelloWorldFunction text="react"/>
-        </Route>
-        <Route path="/INRI7">
-          <h2>INRI7</h2>
-          { showButton && <CicleLifeButton
-              color="#2C9CB2"
-              text="1010101010101"
-              onClick={handleClickCicleLife}
-            />
-          }
-        </Route>
-        <Route path="/INRI8">
-          <h2>INRI8</h2>
-          <button onClick={handleBackground}>Change background</button>
-        </Route>
-        <Route path="/INRI9">
-          <h2>INRI9</h2>
-            {users.map((user) => {
-              return (
-                <UserCard {...user} key={user.name + user.lastName} />
-              );
-            })}
-        </Route>
-        <Route path="/INRI10">
-          <h2>INRI10</h2>
-          <Pokemons />
-        </Route>
-        <Route path="/INRI11">
-          <h2>INRI11</h2>
-           <MyForm users={users}/>
-        </Route>
-        <Route path="/INRI12">
-          <h2>INRI12</h2>
-           <Calculator />
-        </Route>
-        <Route path="/INRI13">
-          <h2>INRI13</h2>
-           <Father />
-        </Route>
-      </Switch>
-    </div>
-    </Router>
+      <Router>
+        <CustomizedAppBar options={options} title="Menú"/>
+        <div className="Home-header" style={{backgroundColor: background}}>
+          <center>
+            <img src={logo} className="Home-logo" alt="logo"/>
+          </center>
+          <Switch>
+            <Route path="/INRI6">
+              <h2>INRI6</h2>
+              <HelloWorldClass text="react"/>
+              <HelloWorldFunction text="react"/>
+            </Route>
+            <Route path="/INRI7">
+              <h2>INRI7</h2>
+              { showButton && <CicleLifeButton
+                  color="#2C9CB2"
+                  text="1010101010101"
+                  onClick={handleClickCicleLife}
+                />
+              }
+            </Route>
+            <Route path="/INRI8">
+              <h2>INRI8</h2>
+              <button onClick={handleBackground}>Change background</button>
+            </Route>
+            <Route path="/INRI9">
+              <h2>INRI9</h2>
+              {users.map((user) => {
+                return (
+                  <UserCard {...user} key={user.name + user.lastName} />
+                );
+              })}
+            </Route>
+            <Route path="/INRI10">
+              <h2>INRI10</h2>
+              <Pokemons />
+            </Route>
+            <Route path="/INRI11">
+              <h2>INRI11</h2>
+              <MyForm users={users}/>
+            </Route>
+            <Route path="/INRI12">
+              <h2>INRI12</h2>
+              <Calculator />
+            </Route>
+            <Route path="/INRI13">
+              <h2>INRI13</h2>
+              <Father />
+            </Route>
+            <Route path="/redux">
+              <h2>Redux</h2>
+              <PokemonsContainer />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }
