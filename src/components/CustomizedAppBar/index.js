@@ -58,7 +58,7 @@ export default function CustomizedAppBar(props) {
           >
             {options.map((option)=>{
               return (
-                <Link to={option.link} key={option.title}>
+                <Link to={option.link} key={option.title} >
                   <MenuItem onClick={handleClose}>
                       {option.title}
                   </MenuItem>

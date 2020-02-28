@@ -15,6 +15,7 @@ export default function PokemonsContainer(){
     dispatch(removePokemon(e.currentTarget.value));
   };
 
+
   return (
     <ReduxPokemons
       handleClick={handleClick}

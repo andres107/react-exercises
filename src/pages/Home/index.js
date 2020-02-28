@@ -13,6 +13,9 @@ import Pokemons from "../../components/Pokemons"
 import Calculator from "../../components/Calculator";
 import Father from "../../components/Father";
 import PokemonsContainer from "../../containers/Pokemons";
+import MyFormContainer from "../../containers/MyFormContainer";
+import PokemonContainer from "../../containers/PokemonContainer";
+import InformationContainer from "../../containers/InformationContainer";
 import {
   BrowserRouter as Router,
   Switch,
@@ -40,27 +43,31 @@ function Home() {
     },
     {
       title: "INRI-9",
-      link: "INRI9"
+      link: "/INRI9"
     },
     {
       title: "INRI-10",
-      link: "INRI10"
+      link: "/INRI10"
     },
     {
       title: "INR-I11",
-      link: "INRI11"
+      link: "/INRI11"
     },
     {
       title: "INRI-12",
-      link: "INRI12"
+      link: "/INRI12"
     },
     {
       title: "INRI-13",
-      link: "INRI13"
+      link: "/INRI13"
     },
     {
        title: "Redux",
-       link: "redux"
+       link: "/redux"
+    },
+    {
+       title: "Redux Form",
+       link: "/redux-form"
     }
   ];
 
@@ -127,6 +134,9 @@ function Home() {
               <h2>Redux</h2>
               <PokemonsContainer />
             </Route>
+            <Route path="/redux-form" component={MyFormContainer} />
+            <Route path="/pokemon/:id/" component={PokemonContainer} />
+            <Route path="/information/" component={InformationContainer} />
           </Switch>
         </div>
       </Router>

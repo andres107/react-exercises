@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import CustomizedTable from "../../components/CustomizedTable"
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
+import { Link } from "react-router-dom";
 
 export default function ReduxPokemons(props){
   const { handleClick, title, pokemons, handleRemovePokemon } = props;
@@ -32,7 +33,9 @@ export default function ReduxPokemons(props){
         <CustomizedTable
           rows={Array.from(pokemons.data, (item)=>{
             return [
-              item.name,
+              (<Link to={`/pokemon/${item.id}`}>
+                 {item.name}
+               </Link>),
               (<IconButton
                  aria-label="delete"
                  onClick={handleRemovePokemon}

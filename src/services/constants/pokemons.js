@@ -1,4 +1,6 @@
 export const POKEMONS_FETCH = "POKEMONS_FETCH";
 export const POKEMON_REMOVE = "POKEMON_REMOVE";
+export const POKEMON_EDIT= "POKEMON_EDIT";
+export const POKEMON_FETCH = "POKEMON_FETCH";
 
 export default POKEMONS_FETCH;
