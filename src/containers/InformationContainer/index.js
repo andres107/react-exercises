@@ -7,9 +7,6 @@ export default function InformationContainer(props){
   const pokemon = useSelector( state => {
     return state.pokemons.selected;
   });
-  if(!pokemon || props.history ){
-    return <Link to="/redux-form">Ir al formulario</Link>
-  }
 
   const { history: { location: { others: {
     name,
