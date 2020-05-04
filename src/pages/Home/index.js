@@ -17,6 +17,7 @@ import MyFormContainer from "../../containers/MyFormContainer";
 import PokemonContainer from "../../containers/PokemonContainer";
 import InformationContainer from "../../containers/InformationContainer";
 import Hoc from "../../pages/Hoc";
+import ShouldUpdate from "../../pages/shouldUpdate";
 import {
   BrowserRouter as Router,
   Switch,
@@ -73,6 +74,10 @@ function Home() {
     {
        title: "Hoc",
        link: "/hoc"
+    },
+    {
+       title: "shouldUpdate",
+       link: "/shouldUpdate"
     }
   ];
 
@@ -143,6 +148,7 @@ function Home() {
             <Route path="/pokemon/:id/" component={PokemonContainer} />
             <Route path="/information/" component={InformationContainer} />
             <Route path="/hoc/" component={Hoc} />
+            <Route path="/shouldUpdate/" component={ShouldUpdate} />
           </Switch>
         </div>
       </Router>
