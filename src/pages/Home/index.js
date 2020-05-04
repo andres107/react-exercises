@@ -18,6 +18,7 @@ import PokemonContainer from "../../containers/PokemonContainer";
 import InformationContainer from "../../containers/InformationContainer";
 import Hoc from "../../pages/Hoc";
 import ShouldUpdate from "../../pages/shouldUpdate";
+import GuessMyNumber from "../../pages/GuessMyNumber";
 import {
   BrowserRouter as Router,
   Switch,
@@ -78,7 +79,12 @@ function Home() {
     {
        title: "shouldUpdate",
        link: "/shouldUpdate"
-    }
+    },
+
+    {
+       title: "React memo",
+       link: "/guessMyNumber"
+    },
   ];
 
   const handleBackground = () => {
@@ -149,6 +155,7 @@ function Home() {
             <Route path="/information/" component={InformationContainer} />
             <Route path="/hoc/" component={Hoc} />
             <Route path="/shouldUpdate/" component={ShouldUpdate} />
+            <Route path="/guessMyNumber/" component={GuessMyNumber} />
           </Switch>
         </div>
       </Router>
