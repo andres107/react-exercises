@@ -16,6 +16,7 @@ import PokemonsContainer from "../../containers/Pokemons";
 import MyFormContainer from "../../containers/MyFormContainer";
 import PokemonContainer from "../../containers/PokemonContainer";
 import InformationContainer from "../../containers/InformationContainer";
+import Hoc from "../../pages/Hoc";
 import {
   BrowserRouter as Router,
   Switch,
@@ -68,6 +69,10 @@ function Home() {
     {
        title: "Redux Form",
        link: "/redux-form"
+    },
+    {
+       title: "Hoc",
+       link: "/hoc"
     }
   ];
 
@@ -137,6 +142,7 @@ function Home() {
             <Route path="/redux-form" component={MyFormContainer} />
             <Route path="/pokemon/:id/" component={PokemonContainer} />
             <Route path="/information/" component={InformationContainer} />
+            <Route path="/hoc/" component={Hoc} />
           </Switch>
         </div>
       </Router>
