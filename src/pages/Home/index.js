@@ -19,6 +19,7 @@ import InformationContainer from "../../containers/InformationContainer";
 import Hoc from "../../pages/Hoc";
 import ShouldUpdate from "../../pages/shouldUpdate";
 import GuessMyNumber from "../../pages/GuessMyNumber";
+import Fibonacci from "../../pages/Fibonacci";
 import {
   BrowserRouter as Router,
   Switch,
@@ -80,11 +81,15 @@ function Home() {
        title: "shouldUpdate",
        link: "/shouldUpdate"
     },
-
     {
        title: "React memo",
        link: "/guessMyNumber"
     },
+    {
+       title: "useMemo",
+       link: "/fibonacci"
+    },
+
   ];
 
   const handleBackground = () => {
@@ -156,6 +161,7 @@ function Home() {
             <Route path="/hoc/" component={Hoc} />
             <Route path="/shouldUpdate/" component={ShouldUpdate} />
             <Route path="/guessMyNumber/" component={GuessMyNumber} />
+            <Route path="/fibonacci/" component={Fibonacci} />
           </Switch>
         </div>
       </Router>
