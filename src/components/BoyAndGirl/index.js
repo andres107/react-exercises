@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Girl from '../Girl';
 
 export function BoyAndGirl(props){
-  const { question, options } = props
+  const { options } = props;
   const [value, setValue] = useState(0);
 
 

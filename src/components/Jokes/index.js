@@ -1,4 +1,4 @@
-import  React, { Component } from 'react';
+import  React from 'react';
 import { useChuckNorris } from '@jsjoeio/react-use-chuck-norris';
 
 const gnumber = Math.floor(Math.random()*10 +1);

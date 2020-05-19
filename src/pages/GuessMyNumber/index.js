@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import Jokes from '../../components/Jokes';
-import Grid from '@material-ui/core/Grid';
 
 export default function GuessMyNumber(){
   const [value, setValue] = useState(0);
@@ -13,7 +12,7 @@ export default function GuessMyNumber(){
     setChances(chances + 1);
   };
 
-  if( chances >= 3 ){
+  if( chances >= 5 ){
     return <b>Falleste amiguito, suerte la proxima</b>;
   }
 
@@ -21,7 +20,7 @@ export default function GuessMyNumber(){
     <form>
     <label>
       Hola, estoy pensando en un número del 1 al 10,
-      tienes tres oportunidades, si adivinas te dire un chiste
+      tienes cinco oportunidades, si adivinas te dire un chiste
       de Mr. Chuck Norris:
     </label><br/>
     <select value={value} onChange={handleChange}>

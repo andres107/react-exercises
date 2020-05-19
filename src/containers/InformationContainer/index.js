@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Pokemon from "../../pages/Pokemon";
-import { Link } from "react-router-dom";
 
 export default function InformationContainer(props){
   const pokemon = useSelector( state => {

@@ -15,7 +15,7 @@ export  default function PokemonContainer(props){
       dispatch(searchPokemon(id));
     }
     action();
-  }, []);
+  }, [dispatch, id]);
 
   if(!pokemon || pokemon.isFetching){
     return (<b> Buscando pokemon...</b>);

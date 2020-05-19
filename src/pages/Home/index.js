@@ -20,6 +20,7 @@ import Hoc from "../../pages/Hoc";
 import ShouldUpdate from "../../pages/shouldUpdate";
 import GuessMyNumber from "../../pages/GuessMyNumber";
 import Fibonacci from "../../pages/Fibonacci";
+import CustomHook from "../../pages/customHook";
 import {
   BrowserRouter as Router,
   Switch,
@@ -89,7 +90,10 @@ function Home() {
        title: "useMemo",
        link: "/fibonacci"
     },
-
+    {
+       title: "customHook",
+       link: "/customHook"
+    },
   ];
 
   const handleBackground = () => {
@@ -162,6 +166,7 @@ function Home() {
             <Route path="/shouldUpdate/" component={ShouldUpdate} />
             <Route path="/guessMyNumber/" component={GuessMyNumber} />
             <Route path="/fibonacci/" component={Fibonacci} />
+            <Route path="/customHook/" component={CustomHook} />
           </Switch>
         </div>
       </Router>

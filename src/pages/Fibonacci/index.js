@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 import FibonacciMemo from "../../components/FibonacciMemo";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
@@ -50,5 +50,3 @@ export function Fibonacci(){
 }
 
 export default Fibonacci;
-
-

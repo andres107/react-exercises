@@ -9,10 +9,12 @@ function fibo(n) {
 
 export function FibonacciMemo(props){
   const { number } = props;
+  const fibo1 = number - 1;
+  const fibo2 = number - 2;
   
-  let fibo1 = useMemo(() => fibo(number-1), [number-1]);
-  let fibo2 = useMemo(() => fibo(number-2), [number-2]);
-  const result = fibo1 + fibo2;
+  const result = useMemo(() => fibo(fibo1), [fibo1]) +
+   useMemo(() => fibo(fibo2), [fibo2]);
+
   return <b><br/>El número {number} de fibonacci es: {result}<br/></b>
 
 }
