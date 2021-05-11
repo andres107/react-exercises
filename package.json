@@ -14,7 +14,7 @@
     "faker": "^4.1.0",
     "fortune-cookies": "^1.0.1",
     "horoscope": "^2.0.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "react": "^16.12.0",
     "react-chuck": "^1.1.0",
     "react-dom": "^16.12.0",
